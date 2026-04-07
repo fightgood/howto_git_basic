@@ -1,171 +1,257 @@
-# 🚀 Git Training Guide (Ultimate Edition)
+# 🚀 Git Training Guide (Ultimate Edition - Full CLI + GitKraken)
 
-## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่ (ฉบับสอนจริง + ใช้งานจริง)
+## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่ (ฉบับสมบูรณ์ระดับอบรม)
 
 ---
 
 # 🌟 ทำไมต้องใช้ Git?
 
-Git คือเครื่องมือที่ช่วยให้:
+Git คือ Version Control System ที่ช่วย:
 
-- 🧾 เก็บประวัติการแก้ไขงาน
-- 👥 ทำงานร่วมกันเป็นทีม
-- ⏪ ย้อนกลับเวอร์ชันได้
-- 🌿 แยกการพัฒนาเป็นส่วน ๆ (Branch)
-
----
-
-# 🖥️ GitKraken (แนะนำ ⭐⭐⭐⭐⭐)
-
-## 📌 GitKraken คืออะไร?
-
-GitKraken คือโปรแกรม GUI สำหรับใช้งาน Git ที่ช่วยให้:
-
-- เห็นภาพการทำงานของ Git แบบ Visual
-- ลดการใช้คำสั่ง CLI
-- ลดความผิดพลาดสำหรับผู้เริ่มต้น
+- 🧾 เก็บประวัติ
+- 👥 ทำงานเป็นทีม
+- ⏪ rollback ได้
+- 🌿 แยก branch
 
 ---
 
-## 🧭 ภาพรวมหน้าจอ GitKraken
+# 🧠 Concept Git
 
-| ส่วน         | อธิบาย                   |
-| ------------ | ------------------------ |
-| Graph        | แสดง commit และ branch   |
-| Commit Panel | ใช้ commit               |
-| File Panel   | แสดงไฟล์ที่แก้ไข         |
-| Toolbar      | ปุ่ม Push / Pull / Fetch |
-
----
-
-## 🔁 Workflow การใช้งาน GitKraken (Step-by-Step)
-
-### 1️⃣ Clone Repository
-
-- กด Clone Repo
-- ใส่ URL
-- เลือก Folder
+```mermaid
+flowchart LR
+A[Working Directory] --> B[Staging Area]
+B --> C[Local Repo]
+C --> D[Remote Repo]
+```
 
 ---
 
-### 2️⃣ แก้ไขไฟล์
+# 💻 Git CLI (ละเอียด 🔥)
 
-- เปิด project ใน IDE
-- แก้ไขไฟล์
+## 🔧 Setup ครั้งแรก
 
----
-
-### 3️⃣ Stage File
-
-- ไปที่ Unstaged Files
-- กด Stage
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git config --list
+```
 
 ---
 
-### 4️⃣ Commit
+## 📁 เริ่มต้น Project
 
-- ใส่ข้อความ commit
-- กด Commit
-
----
-
-### 5️⃣ Push
-
-- กด Push
+```bash
+git init
+```
 
 ---
 
-### 6️⃣ Pull
+## 🔍 ตรวจสอบสถานะ
 
-- กด Pull ก่อนเริ่มงานทุกครั้ง
+```bash
+git status
+```
 
----
+อธิบาย:
 
-## 🌿 การสร้าง Branch
-
-### วิธีทำ:
-
-- คลิกขวาที่ branch → Create branch
-- ตั้งชื่อ: feature/xxx
-
-👉 Best Practice:
-
-- feature/login
-- bugfix/api-error
-- hotfix/production
+- Untracked = ยังไม่ add
+- Modified = แก้ไขแล้ว
+- Staged = พร้อม commit
 
 ---
 
-## 🔀 การ Merge
+## ➕ Add
 
-### วิธีง่าย:
-
-- Drag branch → ไปยัง target branch
-
-### วิธีปกติ:
-
-- Checkout branch เป้าหมาย
-- กด Merge
+```bash
+git add .
+git add file.txt
+```
 
 ---
 
-## ⚠️ การแก้ Conflict (สำคัญมาก)
+## 📌 Commit
 
-เมื่อเกิด conflict:
+```bash
+git commit -m "เพิ่มระบบ login"
+```
 
-1. GitKraken จะแจ้งเตือน
-2. เปิดไฟล์ conflict
-3. เลือก:
-   - Current (ของเรา)
-   - Incoming (ของคนอื่น)
-4. Save → Stage → Commit
+Best Practice:
 
----
-
-## 🔍 การดู History
-
-- คลิก commit
-- ดูรายละเอียดการแก้ไข
-- ดู diff ของไฟล์
+- feat:
+- fix:
+- docs:
 
 ---
 
-## ⏪ Undo / Reset
+## 📜 ดู History
+
+```bash
+git log
+git log --oneline
+```
+
+---
+
+## 🔄 Undo
+
+### ยกเลิก add
+
+```bash
+git restore --staged file.txt
+```
+
+### ยกเลิกแก้ไฟล์
+
+```bash
+git restore file.txt
+```
 
 ### ย้อน commit
 
-- Right click commit → Reset
-
-ประเภท:
-
-- Soft → เก็บไฟล์
-- Hard → ลบหมด
+```bash
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+```
 
 ---
 
-## 🧠 เทคนิคใช้งาน GitKraken (Pro Tips 🔥)
+## 🌿 Branch
 
-- ใช้ Graph ดู flow งาน
-- commit บ่อย ๆ
-- ตั้งชื่อ branch ให้ชัด
-- ใช้ Pull ก่อนทุกครั้ง
-- หลีกเลี่ยง force push
+```bash
+git branch
+git branch feature/login
+git checkout feature/login
+git checkout -b feature/api
+```
 
 ---
 
-## ❗ ข้อควรระวัง
+## 🔀 Merge
 
-- ห้าม commit main โดยตรง
-- ห้าม force push (ยกเว้นจำเป็น)
-- ระวัง reset แบบ hard
+```bash
+git checkout main
+git merge feature/login
+```
+
+---
+
+## 🔗 Remote
+
+```bash
+git remote add origin <url>
+git remote -v
+```
+
+---
+
+## 🚀 Push
+
+```bash
+git push origin main
+```
+
+---
+
+## 🔄 Pull
+
+```bash
+git pull origin main
+```
+
+---
+
+## 📥 Clone
+
+```bash
+git clone <url>
+```
+
+---
+
+## ⚠️ Conflict
+
+เกิดเมื่อ:
+
+- แก้ไฟล์เดียวกัน
+
+แก้:
+
+- เปิดไฟล์
+- เลือก code
+- commit ใหม่
+
+---
+
+# 🖥️ GitKraken (พร้อมภาพตัวอย่าง)
+
+## 📌 GitKraken คืออะไร
+
+GUI Git ที่ช่วยให้:
+
+- เห็น graph
+- ลด error
+
+---
+
+## 📸 ตัวอย่างหน้าจอ GitKraken
+
+### Graph View
+
+![GitKraken Graph](https://support.gitkraken.com/img/gk-commit-graph.png)
+
+### Commit Panel
+
+![GitKraken Commit](https://support.gitkraken.com/img/gk-commit-panel.png)
+
+### Branch View
+
+![GitKraken Branch](https://support.gitkraken.com/img/gk-branch.png)
+
+---
+
+## 🔁 Workflow
+
+```mermaid
+flowchart LR
+A[Clone] --> B[Branch]
+B --> C[Develop]
+C --> D[Commit]
+D --> E[Push]
+E --> F[Merge]
+```
+
+---
+
+## 🌿 Branch Strategy
+
+```mermaid
+gitGraph
+   commit
+   branch develop
+   checkout develop
+   commit
+   branch feature/login
+   commit
+   checkout develop
+   merge feature/login
+```
+
+---
+
+# 📋 Best Practice
+
+- commit บ่อย
+- ใช้ branch
+- pull ก่อน
+- ห้าม commit .env
 
 ---
 
 # 🎯 สรุป
 
-GitKraken คือเครื่องมือที่ช่วยให้ใช้งาน Git ได้ง่ายขึ้นมาก  
-เหมาะสำหรับผู้เริ่มต้นและใช้งานในองค์กร
+CLI = ต้องรู้  
+GitKraken = ใช้ง่าย
 
 ---
 
-✨ End of Guide
+✨ End
