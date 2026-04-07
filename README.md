@@ -1,4 +1,5 @@
 # 🚀 Git Training Guide (Ultimate Edition)
+
 ## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่ (ฉบับสอนจริง + ใช้งานจริง)
 
 ---
@@ -6,6 +7,7 @@
 # 🌟 ทำไมต้องใช้ Git?
 
 Git คือเครื่องมือที่ช่วยให้:
+
 - 🧾 เก็บประวัติการแก้ไขงาน
 - 👥 ทำงานร่วมกันเป็นทีม
 - ⏪ ย้อนกลับเวอร์ชันได้
@@ -13,192 +15,157 @@ Git คือเครื่องมือที่ช่วยให้:
 
 ---
 
-# 🧠 Concept สำคัญ (เข้าใจตรงนี้ = ใช้ Git เป็น)
-
-## 🔁 วงจรการทำงานของ Git
-
-```mermaid
-flowchart LR
-A[📝 แก้ไขไฟล์] --> B[📦 git add]
-B --> C[📌 git commit]
-C --> D[☁️ git push]
-D --> E[🌍 Remote Server]
-```
-
----
-
-# 🧱 โครงสร้าง Git
-
-```mermaid
-flowchart LR
-WD[Working Directory] --> ST[Staging Area]
-ST --> REPO[Local Repository]
-REPO --> REMOTE[Remote Repository]
-```
-
-| ส่วน | อธิบาย |
-|------|--------|
-| 📝 Working Directory | ไฟล์ที่กำลังแก้ |
-| 📦 Staging Area | ไฟล์ที่เตรียม commit |
-| 📌 Repository | เก็บประวัติ |
-
----
-
-# ⚙️ การติดตั้ง
-
-## 💻 Windows
-👉 https://git-scm.com
-
-## ✅ ตรวจสอบ
-```bash
-git --version
-```
-
----
-
-# 🔧 ตั้งค่าเริ่มต้น (สำคัญมาก ❗)
-
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
-```
-
----
-
-# 💻 การใช้งาน CLI (พื้นฐาน)
-
-## 🔹 เริ่มต้น
-```bash
-git init
-```
-
-## 🔹 ตรวจสอบสถานะ
-```bash
-git status
-```
-
-## 🔹 เพิ่มไฟล์
-```bash
-git add .
-```
-
-## 🔹 commit
-```bash
-git commit -m "เพิ่มระบบ login"
-```
-
-## 🔹 push
-```bash
-git push origin main
-```
-
----
-
-# 🌿 การใช้ Branch (หัวใจของ Git)
-
-## 🎯 ทำไมต้องใช้?
-- แยกงาน
-- ลดการชนกันของโค้ด
-- ทำงานพร้อมกันได้
-
-## 🔧 คำสั่ง
-
-```bash
-git checkout -b feature/login
-git checkout main
-git merge feature/login
-```
-
----
-
 # 🖥️ GitKraken (แนะนำ ⭐⭐⭐⭐⭐)
 
-## 📌 จุดเด่น
-- ใช้ง่ายมาก
-- เห็นภาพ branch ชัด
-- ลด error
+## 📌 GitKraken คืออะไร?
+
+GitKraken คือโปรแกรม GUI สำหรับใช้งาน Git ที่ช่วยให้:
+
+- เห็นภาพการทำงานของ Git แบบ Visual
+- ลดการใช้คำสั่ง CLI
+- ลดความผิดพลาดสำหรับผู้เริ่มต้น
 
 ---
 
-## 🔁 Workflow ใน GitKraken
+## 🧭 ภาพรวมหน้าจอ GitKraken
 
-1. Clone repo
-2. สร้าง branch
-3. แก้ไขไฟล์
-4. Stage + Commit
-5. Push
-6. Merge
-
----
-
-# 🔄 Workflow มาตรฐานองค์กร
-
-```mermaid
-gitGraph
-   commit
-   branch develop
-   checkout develop
-   commit
-   branch feature/login
-   commit
-   checkout develop
-   merge feature/login
-   checkout main
-   merge develop
-```
+| ส่วน         | อธิบาย                   |
+| ------------ | ------------------------ |
+| Graph        | แสดง commit และ branch   |
+| Commit Panel | ใช้ commit               |
+| File Panel   | แสดงไฟล์ที่แก้ไข         |
+| Toolbar      | ปุ่ม Push / Pull / Fetch |
 
 ---
 
-# ⚠️ ปัญหาที่พบบ่อย
+## 🔁 Workflow การใช้งาน GitKraken (Step-by-Step)
 
-## ❌ push ไม่ได้
-👉 ต้อง pull ก่อน
+### 1️⃣ Clone Repository
 
-## ❌ conflict
-👉 แก้ไฟล์ → commit ใหม่
-
-## ❌ undo commit
-```bash
-git reset --soft HEAD~1
-```
+- กด Clone Repo
+- ใส่ URL
+- เลือก Folder
 
 ---
 
-# 📋 Best Practice (สำคัญมาก 🔥)
+### 2️⃣ แก้ไขไฟล์
 
-- ✅ commit สั้น กระชับ
-- ✅ ใช้ branch เสมอ
-- ✅ pull ก่อนทำงาน
-- ❌ ห้าม commit `.env`
-- ❌ ห้ามแก้ main ตรง ๆ
+- เปิด project ใน IDE
+- แก้ไขไฟล์
 
 ---
 
-# 🧪 Workshop (ใช้สอนจริง)
+### 3️⃣ Stage File
 
-## 🧪 Lab 1 (Basic)
-- init repo
-- commit
-- push
+- ไปที่ Unstaged Files
+- กด Stage
 
-## 🧪 Lab 2 (Branch)
-- สร้าง branch
-- merge
+---
 
-## 🧪 Lab 3 (Conflict)
-- สร้าง conflict
-- แก้ไข
+### 4️⃣ Commit
+
+- ใส่ข้อความ commit
+- กด Commit
+
+---
+
+### 5️⃣ Push
+
+- กด Push
+
+---
+
+### 6️⃣ Pull
+
+- กด Pull ก่อนเริ่มงานทุกครั้ง
+
+---
+
+## 🌿 การสร้าง Branch
+
+### วิธีทำ:
+
+- คลิกขวาที่ branch → Create branch
+- ตั้งชื่อ: feature/xxx
+
+👉 Best Practice:
+
+- feature/login
+- bugfix/api-error
+- hotfix/production
+
+---
+
+## 🔀 การ Merge
+
+### วิธีง่าย:
+
+- Drag branch → ไปยัง target branch
+
+### วิธีปกติ:
+
+- Checkout branch เป้าหมาย
+- กด Merge
+
+---
+
+## ⚠️ การแก้ Conflict (สำคัญมาก)
+
+เมื่อเกิด conflict:
+
+1. GitKraken จะแจ้งเตือน
+2. เปิดไฟล์ conflict
+3. เลือก:
+   - Current (ของเรา)
+   - Incoming (ของคนอื่น)
+4. Save → Stage → Commit
+
+---
+
+## 🔍 การดู History
+
+- คลิก commit
+- ดูรายละเอียดการแก้ไข
+- ดู diff ของไฟล์
+
+---
+
+## ⏪ Undo / Reset
+
+### ย้อน commit
+
+- Right click commit → Reset
+
+ประเภท:
+
+- Soft → เก็บไฟล์
+- Hard → ลบหมด
+
+---
+
+## 🧠 เทคนิคใช้งาน GitKraken (Pro Tips 🔥)
+
+- ใช้ Graph ดู flow งาน
+- commit บ่อย ๆ
+- ตั้งชื่อ branch ให้ชัด
+- ใช้ Pull ก่อนทุกครั้ง
+- หลีกเลี่ยง force push
+
+---
+
+## ❗ ข้อควรระวัง
+
+- ห้าม commit main โดยตรง
+- ห้าม force push (ยกเว้นจำเป็น)
+- ระวัง reset แบบ hard
 
 ---
 
 # 🎯 สรุป
 
-💡 Git = เครื่องมือสำคัญของนักพัฒนา  
-💡 GitKraken = ตัวช่วยให้ใช้ง่ายขึ้น  
-💡 ต้องฝึกใช้จริงถึงจะเข้าใจ
+GitKraken คือเครื่องมือที่ช่วยให้ใช้งาน Git ได้ง่ายขึ้นมาก  
+เหมาะสำหรับผู้เริ่มต้นและใช้งานในองค์กร
 
 ---
 
-# 🏁 จบการอบรม
-
-✨ ขอให้สนุกกับ Git 🚀
+✨ End of Guide
