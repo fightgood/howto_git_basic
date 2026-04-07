@@ -519,55 +519,151 @@ git log --author="Your Name" --oneline | wc -l
 
 ## 📌 GitKraken คืออะไร
 
-GUI Git ที่ช่วยให้:
+GitKraken Desktop เป็น Git GUI (Graphical User Interface) client ที่ออกแบบมาเพื่อทำให้การจัดการ Git ง่ายขึ้นสำหรับนักพัฒนาทุกระดับ ตั้งแต่มือใหม่จนถึงผู้เชี่ยวชาญ มันแปลงคำสั่ง Git ที่ซับซ้อนให้เป็น interface ภาพที่ intuitve ลดโอกาสเกิดข้อผิดพลาด และเพิ่มประสิทธิภาพในการทำงาน
 
-- เห็น graph
-- ลด error
+### ฟีเจอร์หลักของ GitKraken Desktop:
+
+- **Commit Graph**: แสดงประวัติ commit เป็นภาพกราฟที่อ่านง่าย ช่วยให้เห็นการเปลี่ยนแปลง การ merge และ branch ได้ชัดเจน
+- **Diff View**: ดูความแตกต่างของไฟล์ก่อนและหลังการเปลี่ยนแปลง รองรับการดูแบบ side-by-side, inline หรือ hunk
+- **AI-Powered Features**:
+  - Commit Composer: ช่วยจัดระเบียบ commit ให้เป็นเรื่องราวที่สอดคล้องกัน
+  - Explain Commits: สรุปการเปลี่ยนแปลงในภาษาธรรมชาติ
+  - Auto-Resolve Conflicts: แก้ merge conflict ด้วย AI
+- **Launchpad**: จัดการ pull requests และ issues โดยจัดหมวดหมู่ตามสถานะ (เช่น ready to merge, CI failing, merge conflicts)
+- **Merge Conflict Resolution**: เครื่องมือแก้ conflict ในตัว พร้อมการตรวจจับ conflict ล่วงหน้า
+- **Terminal Integration**: รวม terminal ในตัวสำหรับใช้คำสั่ง Git
+- **Multi-Platform**: รองรับ Windows, Mac, และ Linux
+- **Integrations**: เชื่อมต่อกับ GitHub, GitLab, Bitbucket, Azure DevOps, Jira และอื่นๆ
+- **Self-Hosted Option**: สำหรับองค์กรที่ต้องการ deploy ภายใน firewall
+
+### ประโยชน์:
+
+- ลดเวลาในการเรียนรู้ Git CLI สำหรับผู้เริ่มต้น
+- เพิ่มความเร็วในการทำงานสำหรับผู้เชี่ยวชาญ
+- ช่วยลดข้อผิดพลาดจากคำสั่งผิด
+- รองรับทีมใหญ่ด้วยฟีเจอร์ collaboration
+
+### เวอร์ชันและราคา:
+
+- **ฟรีเวอร์ชัน**: ใช้ได้กับ public repositories และฟีเจอร์พื้นฐาน
+- **Pro เวอร์ชัน**: สำหรับ private repositories และฟีเจอร์เต็มรูปแบบ (มี trial)
+- **Enterprise**: สำหรับองค์กรใหญ่ พร้อม self-hosted
+
+### ลิงก์ดาวน์โหลด:
+
+ดาวน์โหลด GitKraken Desktop ได้ที่: [https://www.gitkraken.com/download](https://www.gitkraken.com/download)
+
+เลือก platform ที่ต้องการ (Windows, Mac, Linux) และติดตั้งตามขั้นตอน
 
 ---
 
-## 📸 ตัวอย่างหน้าจอ GitKraken
+## 📸 ตัวอย่างหน้าจอ GitKraken (เวอร์ชันปัจจุบัน)
 
-### Graph View
+### Commit Graph View
 
-![GitKraken Graph](https://support.gitkraken.com/img/gk-commit-graph.png)
+แสดงประวัติ commit เป็นกราฟภาพ ช่วยให้เห็นการ merge และ branch ได้ง่าย
 
-### Commit Panel
+![GitKraken Commit Graph](https://www.gitkraken.com/wp-content/uploads/2025/03/Frame-19847-1024x577.png)
 
-![GitKraken Commit](https://support.gitkraken.com/img/gk-commit-panel.png)
+### Diff View
 
-### Branch View
+ดูความแตกต่างของไฟล์แบบละเอียด รองรับการแก้ไข code โดยตรง
 
-![GitKraken Branch](https://support.gitkraken.com/img/gk-branch.png)
+![GitKraken Diff View](https://www.gitkraken.com/wp-content/uploads/2025/03/Frame-19848-1024x577.png)
+
+### Launchpad (จัดการ PR และ Issues)
+
+จัดกลุ่ม pull requests และ issues ตามสถานะเพื่อให้ทำงานได้มีประสิทธิภาพ
+
+![GitKraken Launchpad](https://www.gitkraken.com/wp-content/uploads/2025/03/Know-whats-next-1024x577.png)
+
+### Pull Request Status
+
+แสดงสถานะ PR แยกตามหมวดหมู่ เช่น ready to merge หรือมี conflict
+
+![GitKraken PR Status](https://www.gitkraken.com/wp-content/uploads/2025/03/Frame-19849-1-1024x577.png)
+
+### GitHub Pull Request Interface
+
+จัดการ PR โดยตรงจาก GitKraken รวมถึงการ review และส่ง suggestions
+
+![GitKraken PR Interface](https://www.gitkraken.com/wp-content/uploads/2025/03/Frame-19869-1-1024x577.png)
+
+### Conflict Detection
+
+เตือนล่วงหน้าเมื่อมีโอกาสเกิด conflict จากการทำงานของเพื่อนร่วมทีม
+
+![GitKraken Conflict Detection](https://www.gitkraken.com/wp-content/uploads/2025/03/Conflict-detection.png)
+
+### Auto-Resolve Conflicts with AI
+
+แก้ merge conflict ด้วย AI ที่แนะนำการแก้ไขพร้อมคำอธิบาย
+
+![GitKraken Auto-Resolve](https://www.gitkraken.com/wp-content/uploads/2025/08/auto-resolve-with-AI-1024x576.png)
+
+### Commit Composer with AI
+
+จัดระเบียบ commit ให้เป็นเรื่องราวที่สอดคล้องกันด้วย AI
+
+![GitKraken Commit Composer](https://www.gitkraken.com/wp-content/uploads/2025/08/commit-composer-click-1024x576.png)
+
+### Explain Commits with AI
+
+สรุปการเปลี่ยนแปลงของ commit ในภาษาธรรมชาติ
+
+![GitKraken Explain Commits](https://www.gitkraken.com/wp-content/uploads/2025/08/explain-commits-11-3-1024x576.png)
 
 ---
 
-## 🔁 Workflow
+## 🔁 Workflow ใน GitKraken
 
 ```mermaid
 flowchart LR
-A[Clone] --> B[Branch]
-B --> C[Develop]
-C --> D[Commit]
-D --> E[Push]
-E --> F[Merge]
+A[Clone Repository] --> B[สร้าง Branch]
+B --> C[พัฒนาและ Commit]
+C --> D[Push Branch]
+D --> E[สร้าง Pull Request]
+E --> F[Review และ Merge]
 ```
+
+### ขั้นตอนการใช้งานพื้นฐาน:
+
+1. **Clone**: โคลน repository จาก remote
+2. **Branch**: สร้าง branch ใหม่สำหรับฟีเจอร์
+3. **Develop**: แก้ไขโค้ดและ commit เปลี่ยนแปลง
+4. **Push**: ส่ง branch ไป remote
+5. **PR**: สร้าง pull request สำหรับ review
+6. **Merge**: รวม branch เข้า main หลัง review เสร็จ
 
 ---
 
-## 🌿 Branch Strategy
+## 🌿 Branch Strategy ใน GitKraken
 
 ```mermaid
 gitGraph
-   commit
+   commit id: "Initial commit"
    branch develop
    checkout develop
-   commit
+   commit id: "Setup project structure"
    branch feature/login
-   commit
+   checkout feature/login
+   commit id: "Add login form"
+   commit id: "Add authentication logic"
    checkout develop
    merge feature/login
+   commit id: "Update documentation"
+   checkout main
+   merge develop
 ```
+
+### คำอธิบาย Strategy:
+
+- **main**: Branch หลักสำหรับ production
+- **develop**: Branch สำหรับการพัฒนา
+- **feature/**: Branch สำหรับฟีเจอร์ใหม่
+- ใช้ merge หรือ rebase เพื่อรวมการเปลี่ยนแปลง
+
+GitKraken ช่วย visualize strategy นี้ได้ชัดเจน ทำให้การจัดการ branch ง่ายขึ้น
 
 ---
 
