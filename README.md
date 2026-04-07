@@ -1,37 +1,74 @@
-# 🚀 Git Training Guide (Ultimate Edition - ZIP Version)
+# 🚀 Git Training Guide (Ultimate Edition - Full CLI + GitKraken)
 
-## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่
-
----
-
-# 🖥️ GitKraken (พร้อมรูปจริงในเครื่อง)
-
-## 📸 ตัวอย่างหน้าจอ
-
-### Commit Graph
-![Graph](images/gitkraken_graph.png)
-
-### Commit Panel
-![Commit](images/gitkraken_commit.png)
-
-### Branch View
-![Branch](images/gitkraken_branch.png)
+## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่ (ฉบับสมบูรณ์ระดับอบรม)
 
 ---
 
-# 💻 Git CLI (สรุป)
+# 🌟 ทำไมต้องใช้ Git?
 
-```bash
-git init
-git add .
-git commit -m "message"
-git push
+Git คือ Version Control System ที่ช่วย:
+
+- 🧾 เก็บประวัติ
+- 👥 ทำงานเป็นทีม
+- ⏪ rollback ได้
+- 🌿 แยก branch
+
+---
+
+# 🧠 Concept Git
+
+```mermaid
+flowchart LR
+A[Working Directory] --> B[Staging Area]
+B --> C[Local Repo]
+C --> D[Remote Repo]
 ```
 
 ---
 
-<<<<<<< HEAD
-=======
+# 💻 Git CLI (ละเอียด 🔥)
+
+## 🔧 Setup ครั้งแรก
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git config --list
+```
+
+---
+
+## 📁 เริ่มต้น Project
+
+```bash
+git init
+```
+
+---
+
+## 🔍 ตรวจสอบสถานะ
+
+```bash
+git status
+```
+
+อธิบาย:
+
+- Untracked = ยังไม่ add
+- Modified = แก้ไขแล้ว
+- Staged = พร้อม commit
+
+---
+
+## ➕ Add
+
+```bash
+git add .
+git add file.txt
+```
+
+---
+
 ## 📌 Commit
 
 ```bash
@@ -156,6 +193,22 @@ GUI Git ที่ช่วยให้:
 
 ---
 
+## 📸 ตัวอย่างหน้าจอ GitKraken
+
+### Graph View
+
+![GitKraken Graph](https://support.gitkraken.com/img/gk-commit-graph.png)
+
+### Commit Panel
+
+![GitKraken Commit](https://support.gitkraken.com/img/gk-commit-panel.png)
+
+### Branch View
+
+![GitKraken Branch](https://support.gitkraken.com/img/gk-branch.png)
+
+---
+
 ## 🔁 Workflow
 
 ```mermaid
@@ -201,5 +254,4 @@ GitKraken = ใช้ง่าย
 
 ---
 
->>>>>>> fix
 ✨ End
