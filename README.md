@@ -193,22 +193,6 @@ GUI Git ที่ช่วยให้:
 
 ---
 
-## 📸 ตัวอย่างหน้าจอ GitKraken
-
-### Graph View
-
-![GitKraken Graph](https://support.gitkraken.com/img/gk-commit-graph.png)
-
-### Commit Panel
-
-![GitKraken Commit](https://support.gitkraken.com/img/gk-commit-panel.png)
-
-### Branch View
-
-![GitKraken Branch](https://support.gitkraken.com/img/gk-branch.png)
-
----
-
 ## 🔁 Workflow
 
 ```mermaid
