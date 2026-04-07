@@ -26,7 +26,106 @@ C --> D[Remote Repo]
 
 ---
 
-# 💻 Git CLI (ละเอียด 🔥)
+# � การติดตั้ง Git และ TortoiseGit บน Windows 11 Pro
+
+## 🪟 การติดตั้ง Git
+
+Git สำหรับ Windows สามารถติดตั้งได้ง่ายๆ ด้วย installer อย่างเป็นทางการ
+
+### ขั้นตอน:
+
+1. **ดาวน์โหลด Git Installer**:
+   - ไปที่เว็บไซต์: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+   - คลิกดาวน์โหลด Git for Windows (ไฟล์ .exe)
+
+2. **รัน Installer**:
+   - ดับเบิลคลิกไฟล์ที่ดาวน์โหลดมา
+   - คลิก "Next" เพื่อเริ่ม
+
+3. **เลือก Components**:
+   - เลือก "Git Bash Here" และ "Git GUI Here" (แนะนำ)
+   - คลิก "Next"
+
+4. **เลือก Default Editor**:
+   - เลือก editor ที่ต้องการ เช่น Visual Studio Code หรือ Notepad++
+   - ถ้าไม่มี ให้เลือก Vim หรือ Nano
+   - คลิก "Next"
+
+5. **ปรับแต่ง PATH**:
+   - เลือก "Git from the command line and also from 3rd-party software" (แนะนำ)
+   - คลิก "Next"
+
+6. **เลือก HTTPS Transport**:
+   - เลือก "Use the OpenSSL library" (default)
+   - คลิก "Next"
+
+7. **ปรับแต่ง Line Endings**:
+   - เลือก "Checkout as-is, commit as-is" (สำหรับ Windows)
+   - คลิก "Next"
+
+8. **เลือก Terminal Emulator**:
+   - เลือก "Use MinTTY" (default)
+   - คลิก "Next"
+
+9. **ตัวเลือกเพิ่มเติม**:
+   - เลือก "Enable file system caching" และ "Enable Git Credential Manager"
+   - คลิก "Next"
+
+10. **ติดตั้ง**:
+    - คลิก "Install"
+    - รอจนเสร็จ
+
+11. **เสร็จสิ้น**:
+    - คลิก "Finish"
+
+หลังติดตั้ง คุณสามารถเปิด Command Prompt หรือ PowerShell และพิมพ์ `git --version` เพื่อตรวจสอบ
+
+---
+
+## 🐢 การติดตั้ง TortoiseGit
+
+TortoiseGit เป็น Git client ที่รวมเข้ากับ Windows Explorer ช่วยจัดการ Git ผ่านเมนูคลิกขวา ทำให้ง่ายต่อการใช้งานสำหรับผู้ที่ไม่ถนัด CLI
+
+### ขั้นตอน:
+
+1. **ตรวจสอบ Git**:
+   - ต้องติดตั้ง Git ก่อน ถ้ายังไม่มีให้ติดตั้งตามขั้นตอนด้านบน
+
+2. **ดาวน์โหลด TortoiseGit**:
+   - ไปที่เว็บไซต์: [https://tortoisegit.org/download/](https://tortoisegit.org/download/)
+   - เลือกเวอร์ชันที่เหมาะสม (32-bit หรือ 64-bit ตามระบบ)
+
+3. **รัน Installer**:
+   - ดับเบิลคลิกไฟล์ .msi
+   - คลิก "Next"
+
+4. **ยอมรับ License**:
+   - อ่านและคลิก "I accept the terms in the License Agreement"
+   - คลิก "Next"
+
+5. **เลือก Components**:
+   - เลือก default หรือปรับตามต้องการ
+   - คลิก "Next"
+
+6. **เลือกตำแหน่งติดตั้ง**:
+   - ใช้ default หรือเลือกโฟลเดอร์อื่น
+   - คลิก "Next"
+
+7. **ติดตั้ง**:
+   - คลิก "Install"
+   - รอจนเสร็จ
+
+8. **เสร็จสิ้น**:
+   - คลิก "Finish"
+
+หลังติดตั้ง:
+
+- คลิกขวาที่โฟลเดอร์ใน Windows Explorer จะเห็นเมนู TortoiseGit
+- ฟีเจอร์หลัก: Git Clone, Commit, Push, Pull, Merge, etc. ผ่าน GUI
+
+**เคล็ดลับ**: TortoiseGit ทำงานร่วมกับ Git CLI ได้ดี คุณสามารถใช้ทั้งสองร่วมกัน
+
+---
 
 ## 🔧 Setup ครั้งแรก
 
