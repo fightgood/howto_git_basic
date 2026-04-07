@@ -2,6 +2,41 @@
 
 ## 📘 คู่มือการใช้งาน Git สำหรับเจ้าหน้าที่ (ฉบับสมบูรณ์ระดับอบรม)
 
+## 📋 สารบัญ (Table of Contents)
+
+- [ทำไมต้องใช้ Git?](#-ทำไมต้องใช้-git)
+- [Concept Git](#-concept-git)
+- [การติดตั้ง Git และ TortoiseGit บน Windows 11 Pro](#-การติดตั้ง-git-และ-tortoisegit-บน-windows-11-pro)
+  - [การติดตั้ง Git](#-การติดตั้ง-git)
+  - [การติดตั้ง TortoiseGit](#-การติดตั้ง-tortoisegit)
+- [Git CLI (ละเอียด 🔥)](#-git-cli-ละเอียด-)
+  - [Setup ครั้งแรก](#-setup-ครั้งแรก)
+  - [เริ่มต้น Project](#-เริ่มต้น-project)
+  - [ตรวจสอบสถานะ](#-ตรวจสอบสถานะ)
+  - [Add](#-add)
+  - [Commit](#-commit)
+  - [ดู History](#-ดู-history)
+  - [Undo และ Reset](#-undo-และ-reset)
+  - [Branch](#-branch)
+  - [Merge และ Rebase](#-merge-และ-rebase)
+  - [Remote Repository](#-remote-repository)
+  - [Push](#-push)
+  - [Pull และ Fetch](#-pull-และ-fetch)
+  - [Clone](#-clone)
+  - [จัดการ Conflict](#-จัดการ-conflict)
+  - [ดู Diff](#-ดู-diff)
+  - [Stash](#-stash)
+  - [Tag](#-tag)
+  - [.gitignore](#-gitignore)
+  - [Git Statistics](#-git-statistics)
+- [GitKraken (พร้อมภาพตัวอย่าง)](#-gitkraken-พร้อมภาพตัวอย่าง)
+  - [GitKraken คืออะไร](#-gitkraken-คืออะไร)
+  - [ตัวอย่างหน้าจอ GitKraken (เวอร์ชันปัจจุบัน)](#-ตัวอย่างหน้าจอ-gitkraken-เวอร์ชันปัจจุบัน)
+  - [Workflow ใน GitKraken](#-workflow-ใน-gitkraken)
+  - [Branch Strategy ใน GitKraken](#-branch-strategy-ใน-gitkraken)
+- [Best Practice](#-best-practice)
+- [สรุป](#-สรุป)
+
 ---
 
 # 🌟 ทำไมต้องใช้ Git?
