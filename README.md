@@ -131,6 +131,8 @@ TortoiseGit เป็น Git client ที่รวมเข้ากับ Wind
 
 ก่อนใช้งาน Git คุณต้องตั้งค่าข้อมูลส่วนตัวของคุณก่อน เพื่อให้ Git รู้ว่าคุณคือใครเมื่อทำการ commit
 
+### การตั้งค่า Global (ใช้กับทุก repository)
+
 ```bash
 # ตั้งชื่อผู้ใช้
 git config --global user.name "ชื่อของคุณ"
@@ -142,11 +144,29 @@ git config --global user.email "your@email.com"
 git config --list
 ```
 
+### การตั้งค่า Local (เฉพาะ repository นี้)
+
+หากต้องการตั้งค่าเฉพาะสำหรับโปรเจกต์นี้ (เช่น ใช้ชื่อหรืออีเมลอื่น)
+
+```bash
+# ตั้งชื่อผู้ใช้เฉพาะ repository นี้
+git config --local user.name "ชื่อของคุณสำหรับโปรเจกต์นี้"
+
+# ตั้งอีเมลเฉพาะ repository นี้
+git config --local user.email "your@email@project.com"
+
+# ตรวจสอบการตั้งค่าเฉพาะ local
+git config --local --list
+```
+
 **คำอธิบาย:**
 
 - `user.name`: ชื่อที่แสดงในประวัติ commit
 - `user.email`: อีเมลที่เชื่อมโยงกับ commit
-- `--global`: ตั้งค่าให้ใช้กับทุก repository ในเครื่องนี้
+- `--global`: ตั้งค่าให้ใช้กับทุก repository ในเครื่องนี้ (เก็บใน ~/.gitconfig)
+- `--local`: ตั้งค่าเฉพาะ repository นี้ (เก็บใน .git/config)
+- การตั้งค่า local จะ override global ถ้ามี
+- ใช้ `git config --list` เพื่อดูทั้ง global และ local รวมกัน
 
 ---
 
