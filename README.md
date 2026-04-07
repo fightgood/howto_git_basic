@@ -250,6 +250,12 @@ git log
 # ดูแบบสรุป (หนึ่งบรรทัดต่อ commit)
 git log --oneline
 
+# ดูประวัติพร้อม graph ของ branch และ merge
+git log --oneline --graph
+
+# ดูประวัติพร้อม graph และ decorate (แสดง branch และ tag)
+git log --oneline --graph --decorate
+
 # ดูประวัติของไฟล์เฉพาะ
 git log -- file.txt
 
@@ -260,8 +266,11 @@ git log --patch
 **คำอธิบาย:**
 
 - `git log`: แสดงรายละเอียด commit รวมถึง author, date, และ message
-- `--oneline`: แสดง commit hash สั้นและ message
+- `--oneline`: แสดง commit hash สั้นและ message ในหนึ่งบรรทัด
+- `--graph`: แสดงกราฟภาพของ branch และ merge points ด้วยอักขระ ASCII
+- `--decorate`: แสดงชื่อ branch และ tag ที่ชี้ไปยัง commit นั้นๆ
 - `--patch`: แสดง diff ของแต่ละ commit
+- ใช้ร่วมกัน เช่น `--oneline --graph --decorate` เพื่อดูภาพรวมที่ชัดเจน
 
 ---
 
